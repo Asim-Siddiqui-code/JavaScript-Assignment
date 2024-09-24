@@ -1,1 +1,1 @@
-# JavaScript-Assignment
+# Assignment-2
