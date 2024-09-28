@@ -149,12 +149,27 @@ console.log(PrintTitle(products));
 let productcolor = [];
  for (let i = 0; i < products.length; i++) {
     for (let j = 0; j < products[i].variations.length; j++) {
-      if (!productcolor.includes(products[i].variations[j].color)){
-        productcolor.push(products[i].variations[j].color);
+      let color = products[i].variations[j].color;
+      if (!productcolor.includes(color)){
+        productcolor.push(color);
       }
     }
   }
 console.log(productcolor);
+
+function getuniquecolor(products) {
+  let uniquecolor = [];
+  for (let i = 0; i < products.length; i++) {
+    for (let j = 0; j < products[i].variations.length; j++) {
+      let color = products[i].variations[j].color;
+      if (uniquecolor.indexOf(color) === -1) {
+        uniquecolor.push(color);
+      }
+    }
+  }
+  return uniquecolor;
+}
+console.log(getuniquecolor(products));
 
 
 // Exercise 3
@@ -169,10 +184,11 @@ function Totalquantity(products) {
     for (let j = 0; j < products[i].variations.length; j++) {
       sum += products[i].variations[j].quantity;
     }
-    console.log(sum);
+    return sum;
   }
 }
-Totalquantity(products)
+console.log(Totalquantity(products));
+
 
 // Total Quantity from without function
 for (let i = 0; i < products.length; i++) {
@@ -263,11 +279,11 @@ avgratting(products);
 // find a Product by id if not found return empty object
 // Example: {...}
 
-function findProduct(products) {
+function getproductbyId(products, productId) {
   for (let i = 0; i < products.length; i++) {
-    if (products[i].id == 101 || products[i].id == 102 || products[i].id == 103) {
-      console.log(products[i]);
+    if (products[i].id === productId) {
+      return products[i];
     }
   }
 }
-findProduct(products);
+console.log(getproductbyId(products, 101));
