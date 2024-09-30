@@ -178,26 +178,26 @@ console.log(getuniquecolor(products));
 // Try with function or without function
 
 // Total Quantity from function
-function Totalquantity(products) {
+function getTotalquantity(products) {
+  let sum = 0;
   for (let i = 0; i < products.length; i++) {
-    let sum = 0;
     for (let j = 0; j < products[i].variations.length; j++) {
       sum += products[i].variations[j].quantity;
     }
-    return sum;
   }
+  return sum;
 }
-console.log(Totalquantity(products));
+console.log(getTotalquantity(products));
 
 
 // Total Quantity from without function
+let sum = 0;
 for (let i = 0; i < products.length; i++) {
-  let sum = 0;
   for (let j = 0; j < products[i].variations.length; j++) {
     sum += products[i].variations[j].quantity;
   }
-  console.log(sum);
 }
+console.log(sum);
 
 // Exercise 4
 // Get all product reviews where the status is true.
@@ -205,18 +205,19 @@ for (let i = 0; i < products.length; i++) {
 // Try with function or without function
 
 // from function
-function Review(products) {
+function getReview(products) {
   let arr = [];
   for (let i = 0; i < products.length; i++) {
     for (let j = 0; j < products[i].reviews.length; j++) {
       if (products[i].reviews[j].status) {
         arr.push(products[i].reviews[j]);
-        console.log(arr);
       }
     }
   }
+  return arr;
 }
-Review(products);
+console.log(getReview(products));
+
 
 //without function
 let arr = [];
@@ -235,45 +236,37 @@ for (let i = 0; i < products.length; i++) {
 // Try with function or without function
 
 // from function
-function mostexpensivevariation(products) {
+function getMostExpensiveVariation(products) {
+  let maxVariation = null
   for (let i = 0; i < products.length; i++) {
     for (let j = 0; j < products[i].variations.length; j++) {
-      if (products[i].variations[j].price > 58000) {
-        // arr.push(products[i].reviews[j]);
-        // console.log(arr);
-        console.log(products[i].variations[j]);
+      let variation = products[i].variations[j];
+      if (maxVariation === null || variation.price > maxVariation.price) {
+        maxVariation = variation;
       }
     }
   }
-}
-mostexpensivevariation(products);
 
-//without function
-for (let i = 0; i < products.length; i++) {
-  for (let j = 0; j < products[i].variations.length; j++) {
-    if (products[i].variations[j].price > 58000) {
-      // arr.push(products[i].reviews[j]);
-      // console.log(arr);
-      console.log(products[i].variations[j]);
-    }
-  }
+  return maxVariation
 }
+console.log(getMostExpensiveVariation(products));
 
 // Exercise 6
 // Get the average rating of all reviews.
 // Example: 4.2
 
-function avgratting(products) {
+function avgRatting(products) {
+  let sum = 0;
   for (let i = 0; i < products.length; i++) {
-    let sum = 0;
     for (let j = 0; j < products[i].reviews.length; j++) {
       sum += products[i].reviews[j].rating;
+      let averagerating = sum / products[i].reviews.length;
+      return averagerating;
     }
-    let avgrating = sum / products[i].reviews.length;
-    console.log(avgrating);
   }
 }
-avgratting(products);
+console.log(avgRatting(products));
+
 
 // Exercise 7
 // find a Product by id if not found return empty object
