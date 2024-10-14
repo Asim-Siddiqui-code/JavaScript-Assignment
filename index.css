@@ -1,0 +1,120 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(200, 150, 120, 140), rgb(120, 160, 170, 200));
+}
+
+#profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    width: 500px;
+    height: 600px;
+    background-color: pink;
+    margin: auto;
+    box-shadow: 5px 10px 10px 10px #555;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.occupation {
+    text-align: center;
+}
+
+#userInput {
+    margin-top: 10px;
+    width: 250px;
+    height: 35px;
+    border-radius: 50px;
+    padding-left: 10px;
+    border: 2px solid white;
+    background-color: pink;
+    margin-bottom: 20px;
+    box-shadow: 5px px 5px #555;
+}
+
+#userInput:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width: 350px;
+}
+
+.changeName {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: skyblue;
+}
+.changeName:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width: 160px;
+}
+.btns{
+    margin-left: 20px;
+}
+.changeDescription {
+    width: 150px;
+    background-color: skyblue;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.changeDescription:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width: 160px;
+}
+
+.changePicture {
+    background-color: skyblue;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.changePicture:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width: 160px;
+}
+.changeBackground {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: skyblue;
+    margin-left: 80px;
+}
+.changeBackground:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width: 160px;
+}
+.resetFile {
+    margin-top: 20px;
+    background-color: skyblue;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.resetFile:hover {
+    box-shadow: 5px 10px 5px #555;
+    transition: all 0.5s ease-in-out;
+    width:160px;
+}
