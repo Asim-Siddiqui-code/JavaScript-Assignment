@@ -28,7 +28,7 @@ changePicBtn.addEventListener("click" , function(){
 });
 
 let changeBackGroundbtn = document.querySelector(".changeBackground");
-let backroundColor = document.querySelector(".profile-card")
+let backroundColor = document.querySelector(".profile-card")    
 let color = ["skyblue" , "Orange" , "Blue" , "red" , "Yellow"];
 count = 0;
 changeBackGroundbtn.addEventListener("click" , function(){
@@ -41,5 +41,6 @@ resetBtn.addEventListener("click" , function(){
 names.innerHTML = "Asim Siddiqui";
 occupation.innerHTML = "Web Developer";
 backroundColor.style.backgroundColor = "pink";
+image.setAttribute("src" ,"profile.jpeg");
 })
 
